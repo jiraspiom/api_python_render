@@ -25,8 +25,18 @@ livros = [
     },
 ]
 
-@app.route('/livros')
-def obter_livro():
+@app.route('/livros',methods=['GET'])
+def obter_livros():
     return jsonify(livros)
 
-app.run(port=5000,host='localhost',debug=True)
+@app.route('/livro/<int:id>', methods=['GET'])
+def obter_livro(id):
+    for livro in livros:
+        if livro.get('id') == id:
+            return jsonify(livro)
+
+@app.route('/')
+def index():
+    return jsonify({'msg': 'api criada'})
+
+app.run(port=5000)
