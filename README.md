@@ -1,3 +1,6 @@
+python -m venv venv
+pip install -r requirements.txt
+
 # API - e um lugar para disponiblicar recurso e ou funcinalidades
 # 1. Objetivo 
 Criar uma api que disponibiliza a consulta, criacao edicao e exclusao de livro
