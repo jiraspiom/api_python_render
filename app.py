@@ -39,4 +39,4 @@ def obter_livro(id):
 def index():
     return jsonify({'msg': 'api criada'})
 
-app.run(port=5000)
+app.run()
