@@ -39,4 +39,5 @@ def obter_livro(id):
 def index():
     return jsonify({'msg': 'api criada'})
 
-app.run()
+if __name__ == '__main__':
+    app.run()
